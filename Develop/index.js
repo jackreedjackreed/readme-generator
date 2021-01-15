@@ -14,3 +14,21 @@ init();
 
 
 // Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+const rubric = 
+`# Title
+
+## Description
+
+## Table of Contents
+
+## Installation
+
+## Usage
+
+## License
+
+## Contributing
+
+## Tests
+
+## Questions`
