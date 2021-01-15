@@ -3,6 +3,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('utils/generateMarkdown.js')
 
+console.log("testing donezo");
+
 // TODO: Create an array of questions for user input --> github username, email, stuff below
 const questions = [
     {
