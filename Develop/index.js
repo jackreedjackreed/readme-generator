@@ -3,8 +3,12 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require("utils/generateMarkdown.js")
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// TODO: Create an array of questions for user input --> github username, email, stuff below
+const questions = [
+    {
+        
+    }
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
@@ -35,3 +39,28 @@ const rubric =
 ## Tests
 
 ## Questions`
+
+
+
+// inquirer
+// .prompt([
+//     {
+//         type: 'input',
+//         message: 'what is your name?',
+//         name: 'name',
+//     },
+//     {
+//         type: 'input',
+//         message: 'what languages do you know?',
+//         name: 'languages',
+//     },
+//     {
+//         type: 'input',
+//         message: 'what is your preffered method of commuication?',
+//         name: 'communication',
+//     },
+// ]).then((response) => 
+//     {
+//         fs.appendFile('log.txt', response, (err))
+//     }
+// )
