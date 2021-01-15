@@ -11,3 +11,6 @@ function init() {}
 
 // Function call to initialize app
 init();
+
+
+// Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
