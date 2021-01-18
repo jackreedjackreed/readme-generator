@@ -58,9 +58,12 @@ inquirer
         console.log(data.license + "    yooo that's the license man");
         const license = data.license;
         console.log(license + " straight license");
-        const licenseBadge = renderLicenseBadge(license);
-        const licenseLink = renderLicenseLink(license)
-        console.log("heeeeeeey this is the " + licenseBadge);
+        const markdown = generateMarkdown(data);
+        console.log(markdown);
+
+        // const licenseBadge = renderLicenseBadge(license);
+        // const licenseLink = renderLicenseLink(license)
+        // console.log("heeeeeeey this is the " + licenseBadge);
 
     });
 

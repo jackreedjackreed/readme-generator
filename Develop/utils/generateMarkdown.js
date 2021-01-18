@@ -305,6 +305,7 @@ function generateMarkdown(data) {
 
   ## License 
   This repository is licensed under: ${data.license}
+  
 
   ## Table of Contents
   * [Description](#description)
@@ -325,7 +326,7 @@ function generateMarkdown(data) {
 
   ## Contributing 
   
-  ${data.contributing}
+  ${data.contribution}
 
   ## Tests
   
@@ -333,7 +334,7 @@ function generateMarkdown(data) {
 
   ## Questions 
   
-  ${data.username}
+  If you have any questions, send them my way on github @${data.github}
 `;
 }
 
