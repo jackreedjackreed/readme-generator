@@ -297,8 +297,31 @@ if (license === "ISC") {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
+  return  `# ${data.title}
+  // title
+  // description
+  ## Description ${data.description}
+  // license
+  ## License ${data.license}
+  // table of contents
+  ## Table of Contents
+  * [Description](#description)
+  * [License](#license)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  // installation
+  ## Installation ${data.installation}
+  // usage
+  ## Usage ${data.usage}
+  // contributing
+  ## Contributing ${data.contributing}
+  // tests
+  ## Tests ${data.tests}
+  // questions
+  ## Questions ${data.username}
 `;
 }
 
