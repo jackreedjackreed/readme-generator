@@ -339,7 +339,7 @@ function generateMarkdown(data) {
 
   ## Questions 
   
-  If you have any questions, send them my way on github @${data.github}
+  If you have any questions, send them my way on github @${data.github} or send an email to ${data.email}.
 
   ${licenseSection};
 `;
