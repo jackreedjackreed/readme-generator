@@ -311,7 +311,8 @@ function generateMarkdown(data) {
   ## License 
 
   This repository is licensed under: ${data.license} 
-  ${licenseBadge}  || ${licenseLink}
+  ${licenseBadge}
+  ${licenseLink}
   
   ## Table of Contents
   * [Description](#description)
