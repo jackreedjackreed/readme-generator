@@ -3,6 +3,7 @@
 function renderLicenseBadge(license) {
   const badgeISC = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
   const badgeApache = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]"
+  
   const badgeMIT = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
   if (license === "ISC") {
     return badgeISC
@@ -25,6 +26,7 @@ function renderLicenseLink(license) {
   const linkISC = "https://choosealicense.com/licenses/isc/";
   const linkApache = "https://choosealicense.com/licenses/apache-2.0/";
   const linkMIT = "https://choosealicense.com/licenses/mit/";
+
   if (license === "ISC") {
     return linkISC
   } if (license === "Apache") {
@@ -343,7 +345,4 @@ function generateMarkdown(data) {
 `;
 }
 
-// module.exports = renderLicenseBadge;
-// module.exports = renderLicenseLink;
-// module.exports = renderLicenseSection;
 module.exports = generateMarkdown;

@@ -1,11 +1,7 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-
-console.log("testing donezo");
-
-// TODO: Create an array of questions for user input --> github username, email, stuff below
 
 const questions = [
     {
@@ -48,32 +44,15 @@ const questions = [
     }
 ];
 
+// prompt user
 inquirer
     .prompt(questions)
     .then((data) => {
+        // generate README with generateMarkdown.js
         const markdown = generateMarkdown(data);
-        console.log(markdown)
+        // write the README file using the generated-markdown data
         fs.writeFile("README.md", markdown, (err) =>
          err ? console.log("Oops, didn't work!") : console.log("Success!")
     )
     });
 
-
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, (err) =>
-//       err ? console.log("Oops, didn't work!") : console.log("Success!")
-//     )
-// }
-
-// TODO: Create a function to initialize app
-// function init() {
-//     const generatedMarkdown = makeInquiry()
-//     console.log("just generated");
-//     console.log(generatedMarkdown)
-//     // writeToFile("README.md", generatedMarkdown);
-// }
-
-// // Function call to initialize app
-// init();
