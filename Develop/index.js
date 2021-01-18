@@ -1,7 +1,15 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js')
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const renderLicenseBadge = require('./utils/generateMarkdown.js');
+const renderLicenseLink = require('./utils/generateMarkdown.js');
+const renderLicenseSection = require('./utils/generateMarkdown.js');
+
+
+module.exports = renderLicenseBadge;
+module.exports = renderLicenseLink;
+module.exports = renderLicenseSection;
 
 console.log("testing donezo");
 
@@ -47,6 +55,10 @@ const questions = [
     }
 ];
 
+inquirer
+    .prompt(questions)
+    .then((data) => console.log(data));
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
@@ -55,49 +67,3 @@ function init() {}
 
 // Function call to initialize app
 init();
-
-
-// Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-const rubric = 
-`# Title
-
-## Description
-
-## Table of Contents
-
-## Installation
-
-## Usage
-
-## License
-
-## Contributing
-
-## Tests
-
-## Questions`
-
-
-
-// inquirer
-// .prompt([
-//     {
-//         type: 'input',
-//         message: 'what is your name?',
-//         name: 'name',
-//     },
-//     {
-//         type: 'input',
-//         message: 'what languages do you know?',
-//         name: 'languages',
-//     },
-//     {
-//         type: 'input',
-//         message: 'what is your preffered method of commuication?',
-//         name: 'communication',
-//     },
-// ]).then((response) => 
-//     {
-//         fs.appendFile('log.txt', response, (err))
-//     }
-// )

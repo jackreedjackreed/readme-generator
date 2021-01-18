@@ -297,13 +297,16 @@ if (license === "ISC") {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return  `# ${data.title}
-  // title
-  // description
-  ## Description ${data.description}
-  // license
-  ## License ${data.license}
-  // table of contents
+  return  `
+  # ${data.title}
+
+  ## Description 
+  
+  ${data.description}
+
+  ## License 
+  This repository is licensed under: ${data.license}
+
   ## Table of Contents
   * [Description](#description)
   * [License](#license)
@@ -312,17 +315,30 @@ function generateMarkdown(data) {
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
-  // installation
-  ## Installation ${data.installation}
-  // usage
-  ## Usage ${data.usage}
-  // contributing
-  ## Contributing ${data.contributing}
-  // tests
-  ## Tests ${data.tests}
-  // questions
-  ## Questions ${data.username}
+
+  ## Installation
+  
+  ${data.installation}
+
+  ## Usage 
+  
+  ${data.usage}
+
+  ## Contributing 
+  
+  ${data.contributing}
+
+  ## Tests
+  
+  ${data.tests}
+
+  ## Questions 
+  
+  ${data.username}
 `;
 }
 
+module.exports = renderLicenseBadge;
+module.exports = renderLicenseLink;
+module.exports = renderLicenseSection;
 module.exports = generateMarkdown;
