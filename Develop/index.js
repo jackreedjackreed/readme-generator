@@ -40,7 +40,10 @@ const questions = [
         name: "tests",
         message: "Describe any tests relevant to this project."
     },{
-        // need licensing
+        type: "list",
+        name: "license",
+        message: "What license would you like to use?",
+        choices: ["ISC", "Apache", "MIT"]
     }
 ];
 
