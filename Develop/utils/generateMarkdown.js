@@ -4,6 +4,20 @@ function renderLicenseBadge(license) {
   const badgeISC = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
   const badgeApache = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]"
   const badgeMIT = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+  if (license === "ISC") {
+    return badgeISC
+  }
+  if (license === "Apache") {
+    return badgeApache
+  }
+  if (license === "MIT") {
+    return badgeMIT
+  }
+  else {
+    console.log("error, try again");
+    const retry = prompt("now, what license?");
+    renderLicenseBadge(retry);
+  }
 }
 
 // TODO: Create a function that returns the license link
@@ -12,6 +26,17 @@ function renderLicenseLink(license) {
   const linkISC = "https://choosealicense.com/licenses/isc/";
   const linkApache = "https://choosealicense.com/licenses/apache-2.0/";
   const linkMIT = "https://choosealicense.com/licenses/mit/";
+  if (license === "ISC") {
+    return linkISC
+  } if (license === "Apache") {
+    return linkApache
+  } if (license === "MIT") {
+    return linkMIT
+  } else {
+    console.log("error, try again")
+    const retry = prompt("now, what license?")
+    renderLicenseLink(retry);
+  }
 }
 
 // TODO: Create a function that returns the license section of README
@@ -257,7 +282,17 @@ limitations under the License.`;
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`;
-
+if (license === "ISC") {
+  return licenseISC
+} if (license === "Apache") {
+  return licenseApache
+} if (license === "MIT") {
+  return licenseMIT
+} else {
+  console.log("error, try again")
+  const retry = prompt("now, what license?")
+  renderLicenseLink(retry);
+  }
 }
 
 // TODO: Create a function to generate markdown for README
