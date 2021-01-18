@@ -14,9 +14,8 @@ function renderLicenseBadge(license) {
     return badgeMIT
   }
   else {
-    console.log("error, try again");
-    const retry = prompt("now, what license?");
-    renderLicenseBadge(retry);
+    nothing = "";
+    return nothing;
   }
 }
 
@@ -33,9 +32,8 @@ function renderLicenseLink(license) {
   } if (license === "MIT") {
     return linkMIT
   } else {
-    console.log("error, try again")
-    const retry = prompt("now, what license?")
-    renderLicenseLink(retry);
+    nothing = "";
+    return nothing;
   }
 }
 
@@ -289,11 +287,12 @@ if (license === "ISC") {
 } if (license === "MIT") {
   return licenseMIT
 } else {
-  console.log("error, try again")
-  const retry = prompt("now, what license?")
-  renderLicenseLink(retry);
+    nothing = "";
+    return nothing;
   }
 }
+
+console.log(renderLicenseSection("MIT"));
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {

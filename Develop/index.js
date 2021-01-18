@@ -7,10 +7,6 @@ const renderLicenseLink = require('./utils/generateMarkdown.js');
 const renderLicenseSection = require('./utils/generateMarkdown.js');
 
 
-module.exports = renderLicenseBadge;
-module.exports = renderLicenseLink;
-module.exports = renderLicenseSection;
-
 console.log("testing donezo");
 
 // TODO: Create an array of questions for user input --> github username, email, stuff below
@@ -57,7 +53,16 @@ const questions = [
 
 inquirer
     .prompt(questions)
-    .then((data) => console.log(data));
+    .then((data) => {
+        console.log(data);
+        console.log(data.license + "    yooo that's the license man");
+        const license = data.license;
+        console.log(license + " straight license");
+        const licenseBadge = renderLicenseBadge(license);
+        const licenseLink = renderLicenseLink(license)
+        console.log("heeeeeeey this is the " + licenseBadge);
+
+    });
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
