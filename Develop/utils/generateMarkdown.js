@@ -42,8 +42,6 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   const licenseISC = 
   `ISC License
-
-  Copyright (c) [year], [fullname]
   
   Permission to use, copy, modify, and/or distribute this software for any
   purpose with or without fee is hereby granted, provided that the above
@@ -261,8 +259,6 @@ limitations under the License.`;
   const licenseMIT =
   `MIT License
 
-  Copyright (c) [year] [fullname]
-
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
   in the Software without restriction, including without limitation the rights
@@ -295,8 +291,8 @@ if (license === "ISC") {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  // get license information from fxns above to use in README
   const license = data.license;
-  console.log("logging license from generate markdown " + license);
   const licenseBadge = renderLicenseBadge(license);
   const licenseLink = renderLicenseLink(license);
   const licenseSection = renderLicenseSection(license);
@@ -347,7 +343,7 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = renderLicenseBadge;
-module.exports = renderLicenseLink;
-module.exports = renderLicenseSection;
+// module.exports = renderLicenseBadge;
+// module.exports = renderLicenseLink;
+// module.exports = renderLicenseSection;
 module.exports = generateMarkdown;
