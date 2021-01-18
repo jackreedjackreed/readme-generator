@@ -292,10 +292,15 @@ if (license === "ISC") {
   }
 }
 
-console.log(renderLicenseSection("MIT"));
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  const license = data.license;
+  console.log("logging license from generate markdown " + license);
+  const licenseBadge = renderLicenseBadge(license);
+  const licenseLink = renderLicenseLink(license);
+  const licenseSection = renderLicenseSection(license);
+
   return  `
   # ${data.title}
 
@@ -304,9 +309,10 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## License 
-  This repository is licensed under: ${data.license}
-  
 
+  This repository is licensed under: ${data.license} 
+  ${licenseBadge}  || ${licenseLink}
+  
   ## Table of Contents
   * [Description](#description)
   * [License](#license)
@@ -335,6 +341,8 @@ function generateMarkdown(data) {
   ## Questions 
   
   If you have any questions, send them my way on github @${data.github}
+
+  ${licenseSection};
 `;
 }
 
